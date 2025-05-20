@@ -8,7 +8,7 @@ namespace CraftIQ.Inventory.Core.Entities
         public Guid CreatedBy { get; set; }
         public Guid ModifiedBy { get; set; }
 
-        public DateTimeOffset CreatedOn { get; set; }
-        public DateTimeOffset ModifiedOn { get; set; }
+        public DateTimeOffset CreatedOn { get; set; } = DateTimeOffset.Now;
+        public DateTimeOffset ModifiedOn { get; set; } = DateTimeOffset.Now;
     }
 }

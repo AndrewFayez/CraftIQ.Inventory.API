@@ -16,7 +16,7 @@ namespace CraftIQ.Inventory.Infrastructure.Data.Config
             builder.Property(p => p.Id)
                    .ValueGeneratedOnAdd();
 
-            builder.Property(p => p.CategoryId)
+            builder.Property(p => p._CategoryId)
                     .IsRequired();
 
             builder.Property(p => p.Name)

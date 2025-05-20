@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -8,7 +9,7 @@ namespace CraftIQ.Inventory.Core.Entities
 {
     public class Category : BaseEntity
     {
-        public Guid CategoryId { get; set; }
+        public Guid _CategoryId { get; set; } = Guid.NewGuid();
         public string Name { get; set; } = string.Empty;
         public string Description { get; set; } = string.Empty;
 
@@ -16,5 +17,16 @@ namespace CraftIQ.Inventory.Core.Entities
         public List<Product> Products { get; set; } = new();
 
         public Category() { } // for EF core
+
+        public Category(string name ,string description)
+        {
+           
+            Name = name;
+            Description = description;
+            CreatedBy = Guid.Empty;
+            ModifiedBy = Guid.Empty;
+           
+
+        }
     }
 }
