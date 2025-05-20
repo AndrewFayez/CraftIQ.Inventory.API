@@ -1,0 +1,6 @@
+@CraftIQ.Inventory.API_HostAddress = http://localhost:5070
+
+GET {{CraftIQ.Inventory.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
