@@ -1,4 +1,6 @@
-﻿using CraftIQ.Inventory.Infrastructure.Data;
+﻿using CraftIQ.Inventory.Core.Interfaces;
+using CraftIQ.Inventory.Infrastructure.Data;
+using CraftIQ.Inventory.Services.CategoriesImplementations;
 using huzcodes.Persistence.Interfaces.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
@@ -21,7 +23,6 @@ namespace CraftIQ.Inventory.Infrastructure
         {
             services.AddScoped (typeof(IRepository<>), typeof(InventoryRepository<>));
             services.AddScoped (typeof(IReadRepository<>), typeof(InventoryRepository<>));
-
         }
     }
 }

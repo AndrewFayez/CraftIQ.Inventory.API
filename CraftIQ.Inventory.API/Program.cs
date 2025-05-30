@@ -1,5 +1,8 @@
 
+using CraftIQ.Inventory.Core.Interfaces;
 using CraftIQ.Inventory.Infrastructure;
+using CraftIQ.Inventory.Services;
+using CraftIQ.Inventory.Services.CategoriesImplementations;
 using huzcodes.Extensions.Exceptions;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,6 +19,10 @@ var inventoryDbConnectionString = builder.Configuration.GetSection("ConnectionSt
 builder.Services.AddInventoryDbContext(inventoryDbConnectionString.Value!);
 
 builder.Services.AddInfrastructureRegistrations();
+
+builder.Services.AddServicesRegistrations();
+
+
 
 var app = builder.Build();
 
