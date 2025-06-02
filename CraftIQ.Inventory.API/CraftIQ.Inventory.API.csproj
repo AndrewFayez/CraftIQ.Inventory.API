@@ -18,6 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\CraftIQ.Inventory.API.ServiceDefaults\CraftIQ.Inventory.API.ServiceDefaults.csproj" />
     <ProjectReference Include="..\CraftIQ.Inventory.Infrastructure\CraftIQ.Inventory.Infrastructure.csproj" />
   </ItemGroup>
 
